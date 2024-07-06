@@ -314,3 +314,7 @@ frame_progress = 0.799889
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_hrlqp")
+
+[node name="Kill" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_hrlqp")

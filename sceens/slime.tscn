@@ -1,8 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://rd0faexl2t1g"]
+[gd_scene load_steps=12 format=3 uid="uid://rd0faexl2t1g"]
 
-[ext_resource type="Texture2D" uid="uid://o7m75xaf1xfw" path="res://assets/sprites/slime_green.png" id="1_dokh1"]
+[ext_resource type="Texture2D" uid="uid://dwq0j7fwsgtxm" path="res://assets/sprites/slime_green.png" id="1_dokh1"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_xhasr"]
-[ext_resource type="PackedScene" uid="uid://b7u2xh6g8dvny" path="res://scenes/killzone.tscn" id="2_3gl7j"]
+[ext_resource type="PackedScene" uid="uid://b7u2xh6g8dvny" path="res://sceens/killzone.tscn" id="2_3gl7j"]
+[ext_resource type="Script" path="res://sceens/kill.gd" id="4_agqb0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l1ej"]
+atlas = ExtResource("1_dokh1")
+region = Rect2(48, 54, 24, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eieih"]
 atlas = ExtResource("1_dokh1")
@@ -24,6 +29,14 @@ region = Rect2(72, 24, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_1l1ej")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_eieih")
 }, {
 "duration": 1.0,
@@ -36,12 +49,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_r5ewv")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_terbh"]
-size = Vector2(14, 15)
+size = Vector2(18.9655, 10.3448)
 
 [node name="slime" type="Node2D"]
 script = ExtResource("1_xhasr")
@@ -49,14 +62,22 @@ script = ExtResource("1_xhasr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_hhe5e")
-autoplay = "default"
-frame = 2
-frame_progress = 0.197647
+animation = &"die"
+autoplay = "walk"
+frame_progress = 1.0
 
 [node name="Killzone" parent="." instance=ExtResource("2_3gl7j")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+[node name="killzoneCollider" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_terbh")
+
+[node name="Kill" parent="." instance=ExtResource("2_3gl7j")]
+scale = Vector2(2.32, 2.32)
+script = ExtResource("4_agqb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill"]
+position = Vector2(0, -5.17242)
 shape = SubResource("RectangleShape2D_terbh")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
@@ -66,3 +87,10 @@ target_position = Vector2(13, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -9)
 target_position = Vector2(-13, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.008
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
+[connection signal="body_exited" from="Kill" to="Kill" method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="Kill" method="_on_timer_timeout"]
