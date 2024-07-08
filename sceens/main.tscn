@@ -198,7 +198,7 @@ position = Vector2(-49, 24)
 [node name="Slimes" type="Node" parent="."]
 
 [node name="slime" parent="Slimes" instance=ExtResource("3_v3d82")]
-position = Vector2(63, 31)
+position = Vector2(64, 33)
 
 [node name="Labels" type="Node" parent="."]
 
