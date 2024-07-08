@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmq3gm3prd6ep"]
+[gd_scene load_steps=12 format=3 uid="uid://cmq3gm3prd6ep"]
 
 [ext_resource type="PackedScene" uid="uid://17bf4pqimbvr" path="res://sceens/player.tscn" id="1_f4gsb"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ulya6"]
 [ext_resource type="Texture2D" uid="uid://dq5anlbbdrg7r" path="res://assets/sprites/world_tileset.png" id="2_fyawn"]
 [ext_resource type="FontFile" uid="uid://byafg51ma2uc0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_rx0uq"]
-[ext_resource type="PackedScene" uid="uid://cly3qy2e1gh84" path="res://sceens/platform.tscn" id="3_6xewn"]
 [ext_resource type="PackedScene" uid="uid://rd0faexl2t1g" path="res://sceens/slime.tscn" id="3_v3d82"]
 [ext_resource type="PackedScene" uid="uid://cap1j480o211" path="res://sceens/coin.tscn" id="4_30vyp"]
 [ext_resource type="PackedScene" uid="uid://b7u2xh6g8dvny" path="res://sceens/killzone.tscn" id="5_4pxjt"]
@@ -39,15 +38,15 @@ texture = ExtResource("2_fyawn")
 6:0/0 = 0
 6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:0/0/physics_layer_0/angular_velocity = 0.0
-6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -6, 8, 1, -8, -1.3125)
 7:0/0 = 0
 7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:0/0/physics_layer_0/angular_velocity = 0.0
-7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.9375, 8, -6, 8, 1, -8, 1.0625)
 8:0/0 = 0
 8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:0/0/physics_layer_0/angular_velocity = 0.0
-8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.0625, 8, -8, 8, -1.4375, -8, 0.8125)
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
@@ -71,19 +70,15 @@ texture = ExtResource("2_fyawn")
 0:2/0 = 0
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:2/0/physics_layer_0/angular_velocity = 0.0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
 4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:2/0/physics_layer_0/angular_velocity = 0.0
@@ -97,7 +92,6 @@ texture = ExtResource("2_fyawn")
 2:3/0 = 0
 2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:3/0/physics_layer_0/angular_velocity = 0.0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
 0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:4/0/physics_layer_0/angular_velocity = 0.0
@@ -146,9 +140,6 @@ texture = ExtResource("2_fyawn")
 4:3/0 = 0
 4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:3/0/physics_layer_0/angular_velocity = 0.0
-4:4/0 = 0
-4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:4/0/physics_layer_0/angular_velocity = 0.0
 3:4/0 = 0
 3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:4/0/physics_layer_0/angular_velocity = 0.0
@@ -167,6 +158,10 @@ texture = ExtResource("2_fyawn")
 0:6/0 = 0
 0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:6/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_2tubu"]
 physics_layer_0/collision_layer = 1
@@ -181,10 +176,10 @@ unique_name_in_owner = true
 script = ExtResource("1_ulya6")
 
 [node name="ScoreLable" type="Label" parent="GameManager"]
-offset_left = -7.0
-offset_top = -206.0
-offset_right = 97.0
-offset_bottom = -176.0
+offset_left = -16.0
+offset_top = -67.0
+offset_right = 88.0
+offset_bottom = -37.0
 scale = Vector2(1, 0.799999)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_rx0uq")
@@ -196,28 +191,22 @@ autowrap_mode = 2
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_30vyp")]
-position = Vector2(-600, -8)
+position = Vector2(-49, 24)
 
 [node name="Platforms" type="Node" parent="."]
-
-[node name="Platform2" parent="Platforms" instance=ExtResource("3_6xewn")]
-position = Vector2(-500, -32)
 
 [node name="Slimes" type="Node" parent="."]
 
 [node name="slime" parent="Slimes" instance=ExtResource("3_v3d82")]
-position = Vector2(-217, -1)
-
-[node name="slime2" parent="Slimes" instance=ExtResource("3_v3d82")]
-position = Vector2(-312, 0)
+position = Vector2(63, 31)
 
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
-offset_left = -617.0
-offset_top = -44.0
-offset_right = -526.0
-offset_bottom = -36.0
+offset_left = 94.0
+offset_top = -9.0
+offset_right = 185.0
+offset_bottom = -1.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_rbx4b")
 theme_override_font_sizes/font_size = 8
@@ -229,10 +218,10 @@ tile_set = SubResource("TileSet_2tubu")
 format = 2
 layer_0/name = "Background"
 layer_1/name = "Midground"
-layer_1/tile_data = PackedInt32Array(65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65509, 0, 0, 65508, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 0, 0, -11, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, -36, 0, 0, -17, 0, 0)
+layer_1/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 1, 0, 0, 65534, 0, 0, 196605, 0, 0, 196604, 0, 0, 131074, 131072, 0, 131075, 131072, 0, 131076, 131072, 0, 262140, 0, 1, 262141, 0, 1, 262142, 0, 1, 196606, 0, 1, 131070, 0, 1, 131071, 0, 1, 65536, 0, 1, 65537, 0, 1, 131073, 0, 1, 131072, 0, 1, 196607, 0, 1, 262143, 65536, 1, 196608, 65536, 1, 196609, 0, 1, 196610, 131072, 1, 196611, 131072, 1, 196612, 131072, 1, 262148, 131072, 1, 262147, 131072, 1, 262146, 131072, 1, 262145, 0, 1, 262144, 0, 1, 327679, 65536, 1, 327678, 0, 1, 327677, 65536, 1, 327676, 0, 1, 393212, 0, 1, 393213, 0, 1, 393214, 0, 1, 393215, 0, 1, 327680, 0, 1, 327681, 0, 1, 327682, 131072, 1, 327683, 131072, 1, 327684, 131072, 1, 131077, 393216, 0, 131078, 458752, 0, 131079, 524288, 0, 196616, 131072, 1, 196617, 131072, 1, 262153, 131072, 1, 262152, 131072, 1, 327688, 131072, 1, 327689, 131072, 1, 196618, 131072, 1, 262154, 131072, 1, 327690, 131072, 1, 196621, 131072, 1, 262157, 131072, 1, 327693, 131072, 1, 262158, 131072, 1, 196622, 131072, 1, 327694, 131072, 1, 131080, 131072, 0, 131081, 131072, 0, 131082, 131072, 0, 131085, 131072, 0, 131086, 131072, 0, 65546, 131072, 1, -65523, 0, 2, 13, 0, 3, 65549, 0, 4, -65522, 131072, 2, 14, 131072, 3, 65550, 131072, 4, 65545, 65536, 2, 65544, 196608, 2)
 
 [node name="Player" parent="." instance=ExtResource("1_f4gsb")]
-position = Vector2(-553, -6)
+position = Vector2(0, -10)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, 10)
@@ -245,7 +234,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Killzone" parent="." instance=ExtResource("5_4pxjt")]
-position = Vector2(109, 229)
+position = Vector2(0, 229)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_lv6n4")
