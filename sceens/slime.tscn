@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwq0j7fwsgtxm" path="res://assets/sprites/slime_green.png" id="1_dokh1"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_xhasr"]
 [ext_resource type="PackedScene" uid="uid://b7u2xh6g8dvny" path="res://sceens/killzone.tscn" id="2_3gl7j"]
-[ext_resource type="Script" path="res://sceens/kill.gd" id="4_agqb0"]
+[ext_resource type="Script" path="res://scripts/kill.gd" id="4_agqb0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l1ej"]
 atlas = ExtResource("1_dokh1")
