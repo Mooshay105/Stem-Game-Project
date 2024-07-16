@@ -13,5 +13,4 @@ func _process(deltaTime):
 	if ray_cast_right.is_colliding():
 		direction = -1
 		slime.flip_h = true
-	
 	position.x += direction * SPEED * deltaTime
