@@ -193,6 +193,12 @@ autowrap_mode = 2
 [node name="Coin" parent="Coins" instance=ExtResource("4_30vyp")]
 position = Vector2(-49, 24)
 
+[node name="Coin2" parent="Coins" instance=ExtResource("4_30vyp")]
+position = Vector2(-49, 6)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("4_30vyp")]
+position = Vector2(-50, -12)
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Slimes" type="Node" parent="."]

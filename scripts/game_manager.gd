@@ -8,3 +8,5 @@ func inc_score():
 	score += 1
 	score_lable.text = "You collected " + str(score) + " coins!"
 	print(score)
+	if score == 3:
+		print("YAY!")

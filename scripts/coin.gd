@@ -1,5 +1,6 @@
 extends Area2D
 
+var coins = 0
 @onready var game_manager = %GameManager
 @onready var animation_player = $AnimationPlayer
 
